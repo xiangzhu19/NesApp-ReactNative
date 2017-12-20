@@ -100,6 +100,8 @@ export default class CarListView extends Component {
 
     render(){
         return(
+
+
             <View style={styles.outerViewStyle}> 
                 <View style ={styles.headerViewStyle} >
                     <Text style ={{color:'white',fontSize:18}} >
