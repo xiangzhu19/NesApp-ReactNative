@@ -40,8 +40,19 @@ class MainView extends Component {
                     selected = {this.state.selectedItem == 'home'}
                     onPress = {()=> {this.setState({selectedItem:'home'})}}
                 >
+                    <NavigatorIOS 
+                        tintColor = 'orange'
+                        style = {{flex:1 }}
+                        initialRoute = {
+                            {
+                                component: Home,
+                                title: '网易',
+                                leftButtonIcon : {uri: 'navigationbar_friendattention',scale: 2},
+                                rightButtonIcon : {uri: 'navigationbar_pop',scale: 2},
+                            }
+                        }
+                    />
 
-                    <Home/>
                 </TabBarIOS.Item>
 
                  <TabBarIOS.Item
@@ -52,8 +63,16 @@ class MainView extends Component {
                     
                 >
    
-                    <Message/>
-                </TabBarIOS.Item>
+                    <NavigatorIOS 
+                        style = {{flex:1 }}
+                        initialRoute = {
+                            {
+                                component: Home,
+                                title: '消息',
+                            }
+                        }
+                    />  
+                  </TabBarIOS.Item>
                 <TabBarIOS.Item
                     icon = {{uri: 'tabbar_discover',scale : 2}}
                     title = "发现"
@@ -62,7 +81,15 @@ class MainView extends Component {
                     
                 >
  
-                    <Find/>
+                    <NavigatorIOS 
+                        style = {{flex:1 }}
+                        initialRoute = {
+                            {
+                                component: Home,
+                                title: '发现',
+                            }
+                        }
+                    />
                 </TabBarIOS.Item>
                 <TabBarIOS.Item
                     icon = {{uri: 'tabbar_profile',scale : 2}}
@@ -71,8 +98,15 @@ class MainView extends Component {
                     onPress = {()=> {this.setState({selectedItem:'mine'})}}
                     
                 >
-
-                    <Mine/>
+                    <NavigatorIOS 
+                        style = {{flex:1 }}
+                        initialRoute = {
+                            {
+                                component: Home,
+                                title: '我的',
+                            }
+                        }
+                    />
                 </TabBarIOS.Item> 
 
         </TabBarIOS>

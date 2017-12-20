@@ -5,6 +5,10 @@ import {
     Text,
     View,
     StyleSheet,
+    ListView,
+    Image,
+    TouchableOpacity,
+    
  } from 'react-native';
 
 class Home extends Component {
